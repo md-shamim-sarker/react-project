@@ -1,9 +1,10 @@
 import React from 'react';
+import MyRouter from './myrouter/MyRouter';
 
 const App = () => {
   return (
     <div>
-      <h2 className='text-5xl'>Hello World!</h2>
+      <MyRouter></MyRouter>
     </div>
   );
 };
