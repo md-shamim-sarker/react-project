@@ -13,7 +13,7 @@ const Navigation = () => {
                 <details className="group">
                     <summary
                         className="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                        <UserGroupIcon className='w-5'></UserGroupIcon>
+                        <i className="fa-solid fa-fire-flame-curved text-sm"></i>
                         <span className="ml-3 text-sm font-medium">Firebase Authentication</span>
                         <span className="ml-auto shrink-0 transition duration-300 group-open:-rotate-180">
                             <ChevronDownIcon className='w-4'></ChevronDownIcon>
@@ -22,19 +22,19 @@ const Navigation = () => {
                     <nav className="mt-1.5 ml-8 flex flex-col">
                         <NavLink to={"/google"}>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                                <UserGroupIcon className='w-4'></UserGroupIcon>
+                                <i className="fa-brands fa-google text-sm"></i>
                                 <span className="ml-1 text-xs font-medium">Google</span>
                             </div>
                         </NavLink>
                         <NavLink to={"/github"}>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                                <UserGroupIcon className='w-4'></UserGroupIcon>
+                                <i className="fa-brands fa-github text-sm"></i>
                                 <span className="ml-1 text-xs font-medium">Github</span>
                             </div>
                         </NavLink>
                         <NavLink to={"/email_password"}>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                                <UserGroupIcon className='w-4'></UserGroupIcon>
+                                <i className="fa-solid fa-envelope-circle-check text-sm"></i>
                                 <span className="ml-1 text-xs font-medium">Email-Password</span>
                             </div>
                         </NavLink>
