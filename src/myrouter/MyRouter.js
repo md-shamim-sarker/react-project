@@ -2,6 +2,7 @@ import React from 'react';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import About from '../components/About';
 import EmailPasswordAuthentication from '../components/EmailPasswordAuthentication';
+import FacebookAuthentication from '../components/FacebookAuthentication';
 import GithubAuthentication from '../components/GithubAuthentication';
 import GoogleAuthentication from '../components/GoogleAuthentication';
 import Home from '../components/Home';
@@ -26,6 +27,10 @@ const MyRouter = () => {
                 {
                     path: "/google",
                     element: <GoogleAuthentication></GoogleAuthentication>
+                },
+                {
+                    path: "/facebook",
+                    element: <FacebookAuthentication></FacebookAuthentication>
                 },
                 {
                     path: "/github",
