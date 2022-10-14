@@ -31,7 +31,7 @@
         @apply text-xs font-bold
     }
 
-    .btn-blue {
+    button {
         @apply bg-blue-700 text-blue-50 px-5 py-1 m-2 rounded-md
     }
 }
