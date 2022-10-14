@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 const About = () => {
     return (
@@ -9,6 +10,7 @@ const About = () => {
             <h4>Lorem ipsum dolor sit amet.</h4>
             <h5>Lorem ipsum dolor sit amet.</h5>
             <h6>Lorem ipsum dolor sit amet.</h6>
+            <Footer></Footer>
         </div>
     );
 };

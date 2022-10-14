@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+    body {
+        @apply text-gray-700
+    }
+
     h1 {
         @apply text-3xl font-bold
     }
@@ -25,5 +29,9 @@
 
     h6 {
         @apply text-xs font-bold
+    }
+
+    .btn-blue {
+        @apply bg-blue-700 text-blue-50 px-5 py-1 m-2 rounded-md
     }
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import About from '../components/About';
+import GithubAuthentication from '../components/GithubAuthentication';
+import GoogleAuthentication from '../components/GoogleAuthentication';
 import Home from '../components/Home';
-import MobileAside from '../components/MobileAside';
 import Main from '../layout/Main';
 
 const MyRouter = () => {
@@ -20,9 +21,13 @@ const MyRouter = () => {
                     element: <About></About>
                 },
                 {
-                    path: "/mobile_aside",
-                    element: <MobileAside></MobileAside>
-                }
+                    path: "/google",
+                    element: <GoogleAuthentication></GoogleAuthentication>
+                },
+                {
+                    path: "/github",
+                    element: <GithubAuthentication></GithubAuthentication>
+                },
             ]
         },
     ]);
