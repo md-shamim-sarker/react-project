@@ -1,9 +1,12 @@
 import React from 'react';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import About from '../components/About';
+import EmailPasswordAuthentication from '../components/EmailPasswordAuthentication';
 import GithubAuthentication from '../components/GithubAuthentication';
 import GoogleAuthentication from '../components/GoogleAuthentication';
 import Home from '../components/Home';
+import LoginForm from '../components/LoginForm';
+import RegistrationForm from '../components/RegistrationForm';
 import Main from '../layout/Main';
 
 const MyRouter = () => {
@@ -27,6 +30,18 @@ const MyRouter = () => {
                 {
                     path: "/github",
                     element: <GithubAuthentication></GithubAuthentication>
+                },
+                {
+                    path: "/email_password",
+                    element: <EmailPasswordAuthentication></EmailPasswordAuthentication>
+                },
+                {
+                    path: "/login",
+                    element: <LoginForm></LoginForm>
+                },
+                {
+                    path: "/registration",
+                    element: <RegistrationForm></RegistrationForm>
                 },
             ]
         },

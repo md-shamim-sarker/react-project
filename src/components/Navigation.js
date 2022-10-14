@@ -32,10 +32,10 @@ const Navigation = () => {
                                 <span className="ml-1 text-xs font-medium">Github</span>
                             </div>
                         </NavLink>
-                        <NavLink>
+                        <NavLink to={"/email_password"}>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <UserGroupIcon className='w-4'></UserGroupIcon>
-                                <span className="ml-1 text-xs font-medium">Sub Options</span>
+                                <span className="ml-1 text-xs font-medium">Email-Password</span>
                             </div>
                         </NavLink>
                         <NavLink>

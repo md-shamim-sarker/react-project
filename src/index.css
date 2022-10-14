@@ -34,4 +34,12 @@
     button {
         @apply bg-blue-700 text-blue-50 px-5 py-1 m-2 rounded-md
     }
+
+    .blue-btn {
+        @apply bg-blue-700 text-blue-50 px-5 py-1 m-2 rounded-md
+    }
+
+    input {
+        @apply border shadow-md w-full px-2 py-1 mt-1
+    }
 }
