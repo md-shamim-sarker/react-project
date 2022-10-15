@@ -33,7 +33,8 @@ const FacebookAuthentication = () => {
     };
 
     return (
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center my-5'>
+            <h1>Firebase Authentication with Facebook</h1>
             {
                 user.uid
                     ? <button onClick={signOutHandler} className="w-fit">Sign Out</button>

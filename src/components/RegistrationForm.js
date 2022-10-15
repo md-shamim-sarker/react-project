@@ -67,9 +67,9 @@ const RegistrationForm = () => {
                 </div>
                 <p className='text-xs my-5'>
                     By creating an account, you agree to our
-                    <NavLink> <span className='underline text-blue-600'>term and conditions</span></NavLink>
+                    <NavLink to={"/termsAndConditions"}> <span className='underline text-blue-600'>term and conditions</span></NavLink>
                     <span> and </span>
-                    <NavLink className="underline text-blue-600">privacy policy</NavLink>.
+                    <NavLink to={"/privacyPolicy"} className="underline text-blue-600">privacy policy</NavLink>.
                 </p>
                 <div className='text-red-600'>{showError}</div>
                 {

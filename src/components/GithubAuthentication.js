@@ -29,7 +29,8 @@ const GithubAuthentication = () => {
     };
 
     return (
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center my-5'>
+            <h1>Firebase Authentication with Github</h1>
             {
                 user.uid
                     ? <button onClick={signOutHandler}>Sign Out</button>
