@@ -100,12 +100,12 @@ const Navigation = () => {
                     <nav className="mt-1.5 ml-8 flex flex-col">
 
                         {/* Assignment 1 */}
-                        <NavLink to={"/assignment1"}>
+                        <div onClick={() => window.open('https://donate-today-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 01</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/shamimspro/donate-today/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -114,12 +114,12 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 2 */}
-                        <NavLink to={"/assignment2"}>
+                        <div onClick={() => window.open('https://fifa-world-cup-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 02</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/shamimspro/fifa-world-cup/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -128,12 +128,12 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 3 */}
-                        <NavLink to={"/assignment3"}>
+                        <div onClick={() => window.open('https://digital-education-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 03</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/shamimspro/digital-education/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -142,12 +142,12 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 4 */}
-                        <NavLink to={"/assignment4"}>
+                        <div onClick={() => window.open('https://javascript-problem-solving-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 04</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/shamimspro/javascript-problem-solving', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -156,12 +156,12 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 5 */}
-                        <NavLink to={"/assignment5"}>
+                        <div onClick={() => window.open('https://favorite-five-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 05</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/programming-hero-web-course2/best-five-dom-assignment-shamimspro', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -170,12 +170,12 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 6 */}
-                        <NavLink to={"/assignment6"}>
+                        <div onClick={() => window.open('https://bangladesh-news-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 06</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/Programming-Hero-Web-Course4/b6-news-portal-assignment-shamimspro', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -184,12 +184,12 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 7 */}
-                        <NavLink to={"/assignment7"}>
+                        <div onClick={() => window.open('https://typing-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 07</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/programming-hero-web-course1/b6-type-monster-debug-assignment-shamimspro', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
@@ -198,30 +198,16 @@ const Navigation = () => {
                         </div>
 
                         {/* Assignment 8 */}
-                        <NavLink to={"/assignment8"}>
+                        <div onClick={() => window.open('https://study-tracker-shamimspro.netlify.app/', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 08</span>
                             </div>
-                        </NavLink>
+                        </div>
                         <div onClick={() => window.open('https://github.com/Programming-Hero-Web-Course4/b6-ultra-active-club-shamimspro', '_blank')} className='cursor-pointer'>
                             <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                                 <i className="fa-solid fa-file-code"></i>
                                 <span className="ml-1 text-xs font-medium">Assignment 08</span>
-                            </div>
-                        </div>
-
-                        {/* Assignment 9 */}
-                        <NavLink to={"/assignment9"}>
-                            <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                                <i className="fa-solid fa-file"></i>
-                                <span className="ml-1 text-xs font-medium">Assignment 09</span>
-                            </div>
-                        </NavLink>
-                        <div onClick={() => window.open('', '_blank')} className='cursor-pointer'>
-                            <div className="flex items-center rounded-lg px-1 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                                <i className="fa-solid fa-file-code"></i>
-                                <span className="ml-1 text-xs font-medium">Assignment 09</span>
                             </div>
                         </div>
                     </nav>
