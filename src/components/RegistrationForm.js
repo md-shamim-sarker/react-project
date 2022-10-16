@@ -1,41 +1,25 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import {NavLink} from 'react-router-dom';
 import FileLocation from './FileLocation';
 import {UserGroupIcon} from '@heroicons/react/24/solid';
-import {getAuth, createUserWithEmailAndPassword, sendEmailVerification} from "firebase/auth";
-import app from '../firebase/Firebase.init';
+import {AuthContext} from '../contexts/UserContext';
 
 const RegistrationForm = () => {
-    const [showError, setShowError] = useState("");
-    const [success, setSuccess] = useState(false);
+    const {isSuccess, setSuccess, showError, registrationWithEmailPassword} = useContext(AuthContext);
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
         setSuccess(false);
-        const auth = getAuth(app);
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+
         if(password.length < 6) {
             setSuccess(false);
             return;
         }
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
-                setSuccess(true);
-                form.reset();
 
-                sendEmailVerification(auth.currentUser)
-                    .then(() => {
-                        alert("Please check your email address.");
-                    });
-
-            })
-            .catch((error) => {
-                setShowError(error.message);
-            });
+        registrationWithEmailPassword(email, password, form);
     };
 
     return (
@@ -73,7 +57,7 @@ const RegistrationForm = () => {
                 </p>
                 <div className='text-red-600'>{showError}</div>
                 {
-                    success && <div className='text-green-700'>Success</div>
+                    isSuccess && <div className='text-green-700'>Success</div>
                 }
                 <div className='flex flex-col lg:flex-row items-center gap-x-2'>
                     <button type='submit' className='ml-0 blue-btn w-full lg:w-auto'>Create an account</button>

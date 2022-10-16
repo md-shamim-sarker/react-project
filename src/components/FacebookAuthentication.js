@@ -1,36 +1,9 @@
-import React, {useState} from 'react';
-import {getAuth, signInWithPopup, FacebookAuthProvider, signOut} from "firebase/auth";
-import app from '../firebase/Firebase.init';
-
+import React, {useContext} from 'react';
+import {AuthContext} from '../contexts/UserContext';
 
 const FacebookAuthentication = () => {
-    const [user, setUser] = useState({});
 
-    const auth = getAuth(app);
-    const provider = new FacebookAuthProvider();
-
-    const signInHandler = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-                setUser(user);
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                console.log(errorMessage);
-            });
-    };
-
-    const signOutHandler = () => {
-        const auth = getAuth();
-        signOut(auth).then(() => {
-            setUser({});
-        }).catch((error) => {
-            console.log(error);
-        });
-
-    };
+    const {signInWithFacebook, signOutHandler, user} = useContext(AuthContext);
 
     return (
         <div className='flex flex-col items-center my-5'>
@@ -38,7 +11,7 @@ const FacebookAuthentication = () => {
             {
                 user.uid
                     ? <button onClick={signOutHandler} className="w-fit">Sign Out</button>
-                    : <button onClick={signInHandler} className="w-fit">Sign In</button>
+                    : <button onClick={signInWithFacebook} className="w-fit">Sign In</button>
             }
 
             {

@@ -1,32 +1,9 @@
-import React, {useState} from 'react';
-import {getAuth, signInWithPopup, GithubAuthProvider, signOut} from "firebase/auth";
-import app from '../firebase/Firebase.init';
+import React, {useContext} from 'react';
+import {AuthContext} from '../contexts/UserContext';
 import FileLocation from './FileLocation';
 
-const provider = new GithubAuthProvider();
-const auth = getAuth(app);
-
 const GithubAuthentication = () => {
-    const [user, setUser] = useState({});
-
-    const signInHandler = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                const user = result.user;
-                setUser(user);
-                console.log(user);
-            }).catch((error) => {
-                console.log(error);
-            });
-    };
-
-    const signOutHandler = () => {
-        signOut(auth).then(() => {
-            setUser({});
-        }).catch((error) => {
-            console.log(error);
-        });
-    };
+    const {signInWithGithub, signOutHandler, user} = useContext(AuthContext);
 
     return (
         <div className='flex flex-col items-center my-5'>
@@ -34,7 +11,7 @@ const GithubAuthentication = () => {
             {
                 user.uid
                     ? <button onClick={signOutHandler}>Sign Out</button>
-                    : <button onClick={signInHandler}>Sign In</button>
+                    : <button onClick={signInWithGithub}>Sign In</button>
             }
             {
                 user.uid && <>

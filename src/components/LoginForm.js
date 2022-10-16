@@ -1,51 +1,36 @@
-import React, {useState} from 'react';
-import {NavLink, useNavigate} from 'react-router-dom';
+import React, {useContext} from 'react';
+import {NavLink} from 'react-router-dom';
 import {LockClosedIcon} from '@heroicons/react/24/solid';
 import FileLocation from './FileLocation';
-import {getAuth, sendPasswordResetEmail, signInWithEmailAndPassword} from "firebase/auth";
-import app from '../firebase/Firebase.init';
-
-const auth = getAuth(app);
+import {AuthContext} from '../contexts/UserContext';
 
 const LoginForm = () => {
-    const [errorMessage, setErrorMessage] = useState("");
-    const [email, setEmail] = useState("");
-    const navigate = useNavigate();
+    const {signInWithEmailPassword, showError} = useContext(AuthContext);
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
-                navigate("/home");
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                setErrorMessage(errorMessage);
-            });
+        signInWithEmailPassword(email, password);
     };
 
-    const resetPasswordHandler = () => {
-        console.log(email);
-        sendPasswordResetEmail(auth, email)
-            .then(() => {
-                alert('Password reset email sent!');
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                console.log(errorMessage);
-            });
-    };
+    // const resetPasswordHandler = () => {
+    //     console.log(email);
+    //     sendPasswordResetEmail(auth, email)
+    //         .then(() => {
+    //             alert('Password reset email sent!');
+    //         })
+    //         .catch((error) => {
+    //             const errorMessage = error.message;
+    //             console.log(errorMessage);
+    //         });
+    // };
 
-    const onBlurHandler = (event) => {
-        const email = event.target.value;
-        setEmail(email);
-    };
+    // const onBlurHandler = (event) => {
+    //     const email = event.target.value;
+    //     setEmail(email);
+    // };
 
 
     return (
@@ -57,7 +42,8 @@ const LoginForm = () => {
                     <div className='grid grid-cols-1 gap-3'>
                         <div>
                             <h5>Email</h5>
-                            <input onBlur={onBlurHandler} type="email" name="email" id="email" placeholder='Your Email' required />
+                            {/* <input onBlur={onBlurHandler} type="email" name="email" id="email" placeholder='Your Email' required /> */}
+                            <input type="email" name="email" id="email" placeholder='Your Email' required />
                         </div>
                         <div>
                             <h5>Password</h5>
@@ -66,11 +52,12 @@ const LoginForm = () => {
                     </div>
 
                     {
-                        errorMessage &&
+                        showError &&
                         <>
-                            <span className='text-red-700'>{errorMessage}</span><br />
+                            <span className='text-red-700'>{showError}</span><br />
                             Do you forget your password. <br />
-                            <span onClick={resetPasswordHandler} className='text-blue-500 underline'>Reset password</span>
+                            {/* <span onClick={resetPasswordHandler} className='text-blue-500 underline'>Reset password</span> */}
+                            <span className='text-blue-500 underline'>Reset password</span>
                         </>
                     }
 
